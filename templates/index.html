@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html>
+
+   <body>
+   <h1>Single Shot Detection Demo of 605Project </h1>
+   <br><br><br><br>
+      <form action = "/" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+          <br><br><br><br>
+          All data from input to output is loaded through in memory buffer <br> so it might take time <b> O(H x W x C) </b>
+          
+         <h2>Original Image Sample</h2>
+            <img src="https://github.com/jiachengc/herokuobjectdetection/blob/master/templates/cat1.jpeg?raw=true" alt="Trulli" width="333" height="333">
+         <h2>After Detect Image Sample</h2>
+            <img src="https://github.com/jiachengc/herokuobjectdetection/blob/master/templates/image-7.jpg?raw=true" alt="Trulli" width="333" height="333">
+         
+      </form>
+   </body>
+</html>
