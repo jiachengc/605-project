@@ -24,7 +24,13 @@ def upload():
     if request.method == 'POST':
         file = Image.open(request.files['file'].stream)
         img = detector.detectObject(file)
-        return send_file('https://github.com/jiachengc/605-project/tree/main/images',as_attachment=False ,mimetype='image/jpg')
+        
+        
+        return send_file(
+        io.BytesIO(img),
+        mimetype='image/png',
+        as_attachment=True,
+        attachment_filename='result.jpg')
         #return send_file(io.BytesIO(img),attachment_filename='image.jpg',mimetype='image/jpg')
 
 
