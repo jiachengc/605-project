@@ -29,8 +29,8 @@ def upload():
         return send_file(
         io.BytesIO(img),
         mimetype='image/png',
-        as_attachment=True,
-        attachment_filename='result.jpg')
+        as_attachment=False
+        )
         #return send_file(io.BytesIO(img),attachment_filename='image.jpg',mimetype='image/jpg')
 
 
