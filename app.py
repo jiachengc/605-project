@@ -31,7 +31,7 @@ def upload():
         mimetype='image/png',
         as_attachment=False
         )
-        #return send_file(io.BytesIO(img),attachment_filename='image.jpg',mimetype='image/jpg')
+        return send_file(io.BytesIO(img),attachment_filename='image.jpg',mimetype='image/jpg')
 
 
 if __name__ == "__main__":
