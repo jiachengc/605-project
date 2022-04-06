@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+
+   <body>
+   <h2>Single Shot Image Detection Demo of 605 Project </h2>
+      <form action = "/" method = "POST" enctype = "multipart/form-data">
+         <!-- <input type = "file" name = "file" /> -->
+         <table><tr>
+            <td>
+         <select name="filename" id="input" class="form-control" required="required">
+            <option value="">Please choose one image</option>
+            {% for item in result %}
+               <option> {{ item }}</option>
+            {% endfor %}
+         </select>
+         <input type = "submit" value='Submit' />
+      </td>
+      <td>
+         {% if infilename %}
+         <div id="input" style="height: 200px; width: 200px; margin-left: 100px;">
+            <h5>Original Image</h5>
+            <img src="/static/input/{{infilename}}" alt="" srcset="" style="height: 200px; width: 200px;">
+         </div>
+         {% endif %}
+      </td>
+      <td>
+         {% if oufilename %}
+         <div id="output" style="height: 200px; width: 200px; margin-left: 50px;">
+            <h5>Detect Result</h5>
+            <img src="/static/output/{{oufilename}}" alt="" srcset="" style="height: 200px; width: 200px;">
+         </div>
+         {% endif %}
+      </td>
+         </tr>
+         </table>
+      </form>
+      <br>
+      <br>
+      <br>
+      <p>
+         You need to upload an image here <br> Then it will return an image with bounding box and confident score </b>
+        </p>
+         <table><tr>
+        <h3>Original Image Sample (left) and Detected Image Sample (right)</h3>
+        <td><img src="https://github.com/jiachengc/herokuobjectdetection/blob/master/templates/cat1.jpeg?raw=true" alt="Trulli" width="333" height="333" border=0><td>
+        <td><img src="https://github.com/jiachengc/herokuobjectdetection/blob/master/templates/image-7.jpg?raw=true" alt="Trulli" width="333" height="333" border=0><td>
+        </tr></table>
+   </body>
+</html>
